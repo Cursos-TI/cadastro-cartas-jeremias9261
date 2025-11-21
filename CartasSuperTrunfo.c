@@ -1,8 +1,6 @@
 #include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
 
-// Definição do tamanho máximo para as strings (Nome e Código)
-#define MAX_NOME_LEN 50
-#define MAX_CODIGO_LEN 4 // Ex: A01 (3 caracteres) + \0 (1 caractere nulo)
+
 
 int main() {
     // -----------------------------------------------------------------
@@ -10,18 +8,18 @@ int main() {
     // -----------------------------------------------------------------
 
     // Variáveis para a **PRIMEIRA CARTA**
-    char estado1;
-    char codigo_carta1[MAX_CODIGO_LEN];
-    char nome_cidade1[MAX_NOME_LEN];
+    char estado1[50];
+    char codigo_carta1[50];
+    char nome_cidade1[50];
     int populacao1;
     float area_km2_1;
     float pib1;
     int pontos_turisticos1;
 
     // Variáveis para a **SEGUNDA CARTA**
-    char estado2;
-    char codigo_carta2[MAX_CODIGO_LEN];
-    char nome_cidade2[MAX_NOME_LEN];
+    char estado2[50];
+    char codigo_carta2[50];
+    char nome_cidade2[50];
     int populacao2;
     float area_km2_2;
     float pib2;
@@ -37,27 +35,27 @@ int main() {
     // Estado (char)
     printf("1. Estado (Letra de 'A' a 'H'): ");
     // O espaco antes do %c eh importante para ignorar caracteres de nova linha/espaco
-    scanf(" %c", &estado1); 
+    scanf(" %s", &estado1); 
 
     // Código da Carta (string/char[])
     printf("2. Codigo da Carta (Ex: A01): ");
-    scanf("%s", codigo_carta1);
+    scanf("%s", &codigo_carta1);
 
     // Nome da Cidade (string/char[])
     printf("3. Nome da Cidade: ");
     // Leitura do nome com espacos, limitando o tamanho
-    scanf("%s", nome_cidade1); 
+    scanf("%s", &nome_cidade1); 
 
     // População (int)
-    printf("4. Populacao (Num. de habitantes - int): ");
+    printf("4. Populacao (Num. de habitantes): ");
     scanf("%d", &populacao1);
 
     // Area (float)
-    printf("5. Area (em km2 - float): ");
+    printf("5. Area (em km2):   ");
     scanf("%f", &area_km2_1);
 
     // PIB (float)
-    printf("6. PIB (Produto Interno Bruto - float): ");
+    printf("6. PIB (Produto Interno Bruto): ");
     scanf("%f", &pib1);
 
     // Pontos Turísticos (int)
@@ -78,22 +76,22 @@ int main() {
 
     // Código da Carta (string/char[])
     printf("2. Codigo da Carta (Ex: B03): ");
-    scanf("%s", codigo_carta2);
+    scanf("%s", &codigo_carta2);
 
     // Nome da Cidade (string/char[])
     printf("3. Nome da Cidade: ");
-    scanf("%s", nome_cidade2);
+    scanf("%s", &nome_cidade2);
 
     // População (int)
     printf("4. Populacao (Num. de habitantes - int): ");
     scanf("%d", &populacao2);
 
     // Area (float)
-    printf("5. Area (em km2 - float): ");
+    printf("5. Area (em km2): ");
     scanf("%f", &area_km2_2);
 
     // PIB (float)
-    printf("6. PIB (Produto Interno Bruto - float): ");
+    printf("6. PIB (Produto Interno Bruto): ");
     scanf("%f", &pib2);
 
     // Pontos Turísticos (int)
